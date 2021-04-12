@@ -14,11 +14,11 @@ const like = ((e) => {
   const heart=e.target
   mimicServerCall()
   .then(function(response) {
-    if (heart.innerText=EMPTY_HEART) {
+    if (heart.innerText===EMPTY_HEART) {
       heart.innerText=FULL_HEART
       heart.classList.add(`activated-heart`)
-    } else {
-      console.log(`WHY DOESNT THIS WORK`)
+    } 
+    else {
       heart.innerText=EMPTY_HEART
       heart.classList.remove(`activated-heart`)
     }
